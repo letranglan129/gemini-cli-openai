@@ -1,0 +1,18 @@
+# Gemini CLI OpenAI Worker Environment Variables
+
+# Required: OAuth2 credentials JSON from Gemini CLI authentication
+# Get this by running `gemini auth` and copying the contents of ~/.gemini/oauth_creds.json
+GCP_SERVICE_ACCOUNT={"access_token":"","refresh_token":"","scope":"","token_type":"","id_token":"","expiry_date":}
+
+# Optional: Google Cloud Project ID (auto-discovered if not set)
+# GEMINI_PROJECT_ID=your-project-id
+
+# Optional: API key for authentication (if not set, API is public)
+# When set, clients must include "Authorization: Bearer <your-api-key>" header
+# Example: sk-1234567890abcdef1234567890abcdef
+OPENAI_API_KEY=sk-letranglan
+
+# Optional: Enable fake thinking output for thinking models (set to "true" to enable)
+# When enabled, models marked with thinking: true will generate synthetic reasoning text
+# before providing their actual response, similar to OpenAI's o3 model behavior
+ENABLE_FAKE_THINKING=true
